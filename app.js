@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}))
 
 app.get("/", function(req, res){
-res.sendFile(__dirname + "/signup.html")
+res.sendFile(__dirname + "/index.html")
 });
 
 app.post("/", function(req, res){
@@ -34,7 +34,7 @@ app.post("/", function(req, res){
    const url = "https://us14.api.mailchimp.com/3.0/lists/6f6acea588";
    const options = {
         method : "POST",
-        auth:"kimchi:ee3301ffe696a0ae3f2ca5e24d3860f8-us14"
+        auth:"kimchi:d870ec27cafc33a33931ac90ce07fbf0-us14"
     };
     const request = https. request(url, options, function(response){
 
@@ -61,6 +61,6 @@ app.listen(3000, function(){
     console.log("Server is running on port 3000.");
 });
 
-// var apiKey = "ee3301ffe696a0ae3f2ca5e24d3860f8-us14";
+// var apiKey = "d870ec27cafc33a33931ac90ce07fbf0-us14";
 // var uniqueId= "6f6acea588";
 // The root url for the API is https://us14.api.mailchimp.com/3.0/lists/6f6acea588
